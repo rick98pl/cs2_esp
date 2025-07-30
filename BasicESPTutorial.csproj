@@ -7,11 +7,31 @@
 		<Nullable>enable</Nullable>
 		<PlatformTarget>x64</PlatformTarget>
 		<UseWindowsForms>true</UseWindowsForms>
+		<ApplicationIcon>denmark.ico</ApplicationIcon>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Include="denmark.ico" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="ClickableTransparentOverlay" Version="9.1.0" />
 		<PackageReference Include="swed64" Version="1.0.5" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Properties\Settings.Designer.cs">
+	    <DesignTimeSharedInput>True</DesignTimeSharedInput>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Settings.settings</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Properties\Settings.settings">
+	    <Generator>SettingsSingleFileGenerator</Generator>
+	    <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+	  </None>
 	</ItemGroup>
 
 </Project>

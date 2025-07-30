@@ -24,6 +24,7 @@ namespace BasicESPTutorial
         private Vector4 enemyColor = new Vector4(1, 0, 0, 1);
         private Vector4 teamColor = new Vector4(0, 1, 0, 1);
         private Vector4 boneColor = new Vector4(1, 1, 1, 1);
+        private bool drawRectangle = false;
         float boneThickness = 4;
 
 
@@ -52,6 +53,11 @@ namespace BasicESPTutorial
                 ImGui.ColorEdit4("##enemycolor", ref enemyColor);
             }
 
+            if (ImGui.CollapsingHeader("Draw rectangle"))
+            {
+                ImGui.Checkbox("##drawtecangle", ref drawRectangle);
+            }
+
             //if (ImGui.CollapsingHeader("Bone color"))
             //{
             //    ImGui.ColorEdit4("##bonecolor", ref enemyColor);
@@ -69,7 +75,10 @@ namespace BasicESPTutorial
                         
                         DrawLine(entity);
                         DrawBones(entity);
-                        DrawBox(entity);
+                        if (drawRectangle)
+                        {
+                            DrawBox(entity);
+                        }
                     }
                 }
             }

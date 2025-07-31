@@ -13,9 +13,9 @@ Vector2 screenSize = renderer.screenSize;
 List<Entity> entities = new List<Entity>();
 Entity localPlayer = new Entity();
 
-int dwEntityList = 0x1CBE5B0;
-int dwViewMatrix = 0x1D21980;
-int dwLocalPlayerPawn = 0x1AF4B00;
+int dwEntityList = 0x1CBE6A0;
+int dwViewMatrix = 0x1D21A80;
+int dwLocalPlayerPawn = 0x1AF4B80;
 
 int m_vOldOrigin = 0x15B0;
 int m_iTeamNum = 0x3EB;
